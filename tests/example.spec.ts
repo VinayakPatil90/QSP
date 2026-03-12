@@ -29,4 +29,9 @@ test('frames',async({page})=>{
 test('pop-ups',async({page})=>{
     await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
     await page.getByText('Popups').click()
+});
+
+test('Date & Time Picker',async({page})=>{
+    await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
+    await page.getByText('Date & Time Picker').click()
 })
