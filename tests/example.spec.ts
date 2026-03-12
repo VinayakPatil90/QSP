@@ -18,11 +18,14 @@ test('get started link', async ({ page }) => {
 
   await expect(page.getByRole('status').first()).toHaveText('Registered successfully')
 });
-
+test('frames',async({page})=>{
+    await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
+    await page.getByText('Mouse Actions').click()
+});
 test('frames',async({page})=>{
     await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
     await page.getByText('Frames').click()
-})
+});
 test('pop-ups',async({page})=>{
     await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
     await page.getByText('Popups').click()
