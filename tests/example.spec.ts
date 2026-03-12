@@ -17,5 +17,9 @@ test('get started link', async ({ page }) => {
   await page.getByRole('button',{name:'Register'}).click()
 
   await expect(page.getByRole('status').first()).toHaveText('Registered successfully')
-
 });
+
+test('pop-ups',async({page})=>{
+    await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
+    await page.getByText('Popups').click()
+})
