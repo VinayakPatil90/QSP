@@ -29,4 +29,8 @@ test('pop-ups', async ({ page }) => {
 
 test('Date & Time Picker', async ({ page }) => {
   await page.getByText('Date & Time Picker').click()
-})
+});
+
+test('Scroll', async ({ page }) => {
+  await page.getByText('Scroll').click()
+});
