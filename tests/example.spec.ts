@@ -18,7 +18,7 @@ test('get started link', async ({ page }) => {
 
   await expect(page.getByRole('status').first()).toHaveText('Registered successfully')
 });
-test('frames',async({page})=>{
+test('Mouse Action',async({page})=>{
     await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
     await page.getByText('Mouse Actions').click()
 });
