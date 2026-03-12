@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { beforeEach } from 'node:test';
 
-test.beforeEach('has logo', async ({ page }) => {
+test.beforeEach('Navigate to application', async ({ page }) => {
   await page.goto('https://demoapps.qspiders.com/ui?scenario=1');
 });
 
