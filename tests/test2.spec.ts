@@ -4,12 +4,12 @@ test.beforeEach('Navigate to application', async ({ page }) => {
     await page.goto('https://demoapps.qspiders.com/ui?scenario=1')
 })
 
-test('Date Picker', async ({ page }) => {
-    await page.getByText('Date & Time Picker').click();
-    await page.getByText('Date Picker').click();
-    await page.locator('svg').first().click();
-    await page.locator('[role="option"]').filter({ hasText: '16' }).click();
-})
+// test('Date Picker', async ({ page }) => {
+//     await page.getByText('Date & Time Picker').click();
+//     await page.getByText('Date Picker').click();
+//     await page.locator('svg').first().click();
+//     await page.locator('[role="option"]').filter({ hasText: '16' }).click();
+// })
 
 test('Table', async ({ page }) => {
     await page.getByText('Web Table').click();
@@ -34,17 +34,17 @@ test('Table', async ({ page }) => {
     }
 });
 
-// test('Dynamic Table', async ({ page }) => {
-//     await page.getByText('Web Table').click();
-//     await page.getByText('Dynamic Web Table').click();
-//     const row = await page.getByRole('row', { name: "Samsung Galaxy" })
-//     await row.locator('td').nth(4).locator('.cursor-pointer').click()
+test('Dynamic Table', async ({ page }) => {
+    await page.getByText('Web Table').click();
+    await page.getByText('Dynamic Web Table').click();
+    const row = await page.getByRole('row', { name: "Samsung Galaxy" })
+    await row.locator('td').nth(4).locator('.cursor-pointer').click()
 
-//     const form = await page.locator('form aside')
-//     await form.locator('select[name="quantity"]').click()
-//     await page.locator('form aside select[name="quantity"]').selectOption('2');
-//     await form.locator('#updatebtn').click()
-// });
+    const form = await page.locator('form aside')
+    await form.locator('select[name="quantity"]').click()
+    await page.locator('form aside select[name="quantity"]').selectOption('2');
+    await form.locator('#updatebtn').click()
+});
 
 // test('Table Sort', async ({ page }) => {
 //     await page.getByText('Web Table').click();
